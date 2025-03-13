@@ -9,7 +9,8 @@ Biblioteca: Gerencia livros, membros e empréstimos.
 Livro: Representa um livro com atributos como título, autor e ISBN.
 Membro: Representa um membro da biblioteca com nome, ID e email.
 Emprestimo: Controla os empréstimos de livros feitos por membros, registrando a data do empréstimo.
-Funcionalidades
+
+### Funcionalidades
 O sistema permite as seguintes operações:
 
 Adicionar livro: Adiciona um livro à biblioteca.
