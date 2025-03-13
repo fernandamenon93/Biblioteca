@@ -5,13 +5,11 @@ class Biblioteca {
     private List<Membro> membros = new ArrayList<>();
     private List<Emprestimo> emprestimos = new ArrayList<>();
 
-    // Adicionar livro
     public void adicionarLivro(Livro livro) {
         livros.add(livro);
         System.out.println("Livro adicionado: " + livro.getTitulo());
     }
 
-    // Remover livro
     public void removerLivro(Livro livro) {
         if (livros.remove(livro)) {
             System.out.println("Livro removido: " + livro.getTitulo());
@@ -20,13 +18,11 @@ class Biblioteca {
         }
     }
 
-    // Registrar membro
     public void registrarMembro(Membro membro) {
         membros.add(membro);
         System.out.println("Membro registrado: " + membro.getNome());
     }
 
-    // Registrar empréstimo
     public void registrarEmprestimo(Livro livro, Membro membro) {
         if (livros.contains(livro)) {
             Emprestimo emprestimo = new Emprestimo(livro, membro, new Date());
@@ -37,7 +33,6 @@ class Biblioteca {
         }
     }
 
-    // Devolver livro
     public void devolverLivro(Livro livro, Membro membro) {
         Emprestimo emprestimoEncontrado = null;
         for (Emprestimo e : emprestimos) {
@@ -54,7 +49,6 @@ class Biblioteca {
         }
     }
 
-    // Exibir todos os livros
     public void exibirLivros() {
         System.out.println("\nLivros disponíveis na biblioteca:");
         for (Livro livro : livros) {
